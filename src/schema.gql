@@ -1,0 +1,43 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Mascota {
+  id_cliente: String!
+  id_tipo_mascota: String!
+  id_habito: String!
+  nombre_mascota: String!
+  fecha_nacimiento: String!
+  genero: String!
+  color: String!
+  esterilizado: String!
+  active: Boolean!
+}
+
+type Query {
+  mascots: [Mascota!]!
+  mascota(id: ID!): Mascota!
+}
+
+type Mutation {
+  createMascota(createMascotaDto: CreateMascotaDto!): Mascota!
+  updateMascota(id: ID!, updateMascotaDto: UpdateMascotaDto!): Mascota!
+  removeMascota(id: ID!): Mascota!
+  updateAllActiveCompra: Mascota!
+}
+
+input CreateMascotaDto {
+  id_cliente: String!
+  id_tipo_mascota: String!
+  id_habito: String!
+  nombre_mascota: String!
+  fecha_nacimiento: String!
+  genero: String!
+  color: String!
+  esterilizado: String!
+  active: Boolean!
+}
+
+input UpdateMascotaDto {
+  fecha_nacimiento: String!
+}
